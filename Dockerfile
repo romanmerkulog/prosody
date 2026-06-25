@@ -2,7 +2,7 @@ FROM prosodyim/prosody:13.0
 
 USER root
 RUN apt update; \
-    apt install -yq lua-luaossl lua-sec; \
+    apt install -yq lua-luaossl luarocks; \
     luarocks install luassl || true
 
 RUN prosodyctl install --server=https://modules.prosody.im/rocks/ mod_cloud_notify_encrypted; \
