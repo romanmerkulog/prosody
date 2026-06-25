@@ -1,4 +1,4 @@
-FROM prosodyim/prosody:latest
+FROM prosodyim/prosody:13.0
 
 USER root
 RUN apt update; \
