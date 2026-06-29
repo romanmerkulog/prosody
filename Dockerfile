@@ -6,5 +6,6 @@ RUN apt update; \
     luarocks install luassl || true
 
 RUN prosodyctl install --server=https://modules.prosody.im/rocks/ mod_cloud_notify_extensions; \
+    prosodyctl install --server=https://modules.prosody.im/rocks/ mod_admin_shell; \
     prosodyctl install --server=https://modules.prosody.im/rocks/ mod_cloud_notify_filters; \
     prosodyctl install --server=https://modules.prosody.im/rocks/ mod_cloud_notify_priority_tag
